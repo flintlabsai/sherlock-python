@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "sherlock-python"
+  site-url: "https://flintlabsai.github.io/sherlock-python"
+  description: "Sherlock's Agentic SDK for python"
+  repo-branch: main
+  repo-url: "https://github.com/flintlabsai/sherlock-python"
