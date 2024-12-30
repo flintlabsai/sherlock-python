@@ -2,7 +2,7 @@ project:
   output-dir: _docs
 
 website:
-  title: "sherlock-python"
+  title: "sherlock-domains"
   site-url: "https://flintlabsai.github.io/sherlock-python"
   description: "Sherlock's Agentic SDK for python"
   repo-branch: main

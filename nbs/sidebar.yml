@@ -1,0 +1,7 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - 00_keys.ipynb
+      - 01_api.ipynb
+      - 02_sherlock.ipynb
