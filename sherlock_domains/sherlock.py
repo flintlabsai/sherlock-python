@@ -45,10 +45,10 @@ class Sherlock:
         # TODO: handle token expiration
         return self.access_token
 
-    def search_domains(self, query: str) -> api.DomainSearchResponse:
+    def search(self, query: str) -> api.DomainSearchResponse:
         return api.search_domains(self._auth_token(), query)
     
-    def purchase_domain(self, search_id: str, domain: str, contact_info: api.ContactInformation, payment_method: str = "credit_card") -> str:
+    def purchase(self, search_id: str, domain: str, contact_info: api.ContactInformation, payment_method: str = "credit_card") -> str:
         domain_offer = api.request_offer(search_id, domain, contact_info, self._auth_token())
 
         if domain_offer is None:
@@ -65,7 +65,7 @@ class Sherlock:
         elif payment_method == "lightning":
             return payment_request["payment_method"]["lightning_invoice"]
 
-    def get_domains(self) -> List[api.DomainInfo]:
+    def my_domains(self) -> List[api.DomainInfo]:
         return api.get_domains(self._auth_token())
     
     def get_dns_records(self, domain: str) -> List[api.DNSRecord]:
